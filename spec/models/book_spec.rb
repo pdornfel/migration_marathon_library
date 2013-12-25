@@ -8,6 +8,8 @@ describe Book do
       it { should validate_numericality_of(:rating) }
       it { should have_valid(:rating).when(0, 1, 99, 100) }
       it { should_not have_valid(:rating).when('fail', -1, 101) }
-
   end
+
+  it { should have_many(:checkouts) }
+
 end
