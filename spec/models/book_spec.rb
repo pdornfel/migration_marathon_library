@@ -12,4 +12,7 @@ describe Book do
 
   it { should have_many(:checkouts) }
 
+  it { should have_many :categorizations }
+  it { should have_many(:categories).through(:categorizations) }
+
 end
